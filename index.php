@@ -1,7 +1,18 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Milenica
- * Date: 9/6/2016
- * Time: 6:00 PM
- */
+<?php $page_title = "index" ;?>
+<?php  include_once "includes/header.inc.php";?>
+
+<!-- Navbar -->
+<?php  include_once "includes/main/nav-bar.php";?>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php  include_once "includes/footer.inc.php";?>
