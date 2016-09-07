@@ -1,4 +1,5 @@
 <!-- Navbar -->
+<?php $user = "D";?>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -30,8 +31,20 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-plus"></span> SignUp</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Your Account</a></li>
+                <?php if($user){
+                        echo ' <li><a href="logout.php"><span class="glyphicon glyphicon-of"></span> Logout</a></li>';
+                    }else {
+                        echo '<li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>';
+                    }
+                ?>
+                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-cog"></span> Your Account</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Create Post</a></li>
+
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </li>
 
             </ul>
         </div>

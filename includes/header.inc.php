@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php  echo $page_title; ?></title>
+    <title><?php  echo (isset($page_title)? $page_title:"Some Content Page"); ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -14,7 +14,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <! User Defined Scripts -->
-    <script src="#"></script>
-    <link rel="stylesheet" href="#">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
