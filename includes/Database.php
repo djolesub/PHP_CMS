@@ -10,7 +10,7 @@ class Database {
     private $host = "localhost";
     private $username = "root";
     private $password = "coperman";
-    private $db = "formsa";
+    private $db = "forms";
 
     private static $instance = null;
     private $conn=  null;
