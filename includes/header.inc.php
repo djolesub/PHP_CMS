@@ -13,7 +13,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <! User Defined Scripts -->
+    <!-- User Defined Scripts -->
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>

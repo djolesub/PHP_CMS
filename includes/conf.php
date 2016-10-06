@@ -9,8 +9,9 @@
     require_once "autoload.php";
     require_once "Database.php";
     $user = (isset($_SESSION['user']))? $user:null;
+    $db_instance = new Database();
+    $conn = $db_instance->getConnection();
 
-    $db = Database::getInstance();
-    $dbConn = $db->connect();
+
 
 ?>

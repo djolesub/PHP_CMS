@@ -20,4 +20,39 @@ INSERT INTO users(userType,username,email,pass) VALUES
 ('admin', 'adminUser', 'djolesub#gmail.com', SHA1('coperman'));
 
 
+USE estates;
+CREATE TABLE houses(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    location TINYTEXT NOT NULL,
+    price DECIMAL(2,9) NOT NULL,
+    type  TINYTEXT NOT NULL,
+    description VARCHAR(100),
+    b_rooms TINYINT,
+    thum VARCHAR(45),
+    full_spec VARCHAR(60),
+    status TINYTEXT
+    
+
+
+
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,5 +1,9 @@
-<!-- Navbar -->
-<?php $user = "D";?>
+
+<?php
+    session_start();
+    $user = (isset($_SESSION['username'])?$_SESSION['username']:null);
+
+?>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -12,9 +16,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Arhives</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a href="home.php">Home</a></li>
+                <li><a href="arhives.php">Arhives</a></li>
+                <li><a href="contacts.php">Contact</a></li>
                 <li>
                     <!-- Search Bar -->
                     <div class="col-sm-3 col-md-12">
@@ -30,13 +34,16 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-plus"></span> SignUp</a></li>
+                <li><a href="signup.php"><span class="glyphicon glyphicon-plus"></span> SignUp</a></li>
                 <?php if($user){
                         echo ' <li><a href="logout.php"><span class="glyphicon glyphicon-of"></span> Logout</a></li>';
                     }else {
                         echo '<li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>';
                     }
                 ?>
+               <?php
+               if($user){
+               echo '
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-cog"></span> Your Account</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Account</a></li>
@@ -45,6 +52,8 @@
                         <li><a href="#">Settings</a></li>
                     </ul>
                 </li>
+                ';}
+               ?>
 
             </ul>
         </div>
